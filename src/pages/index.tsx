@@ -1,5 +1,7 @@
 import BallonItem from '@/components/ballonItem'
 import CustomerCard from '@/components/cards/customer'
+import ServiceCard from '@/components/cards/service'
+import { Desktop } from 'phosphor-react'
 import Head from 'next/head'
 
 export default function Home() {
@@ -25,6 +27,13 @@ export default function Home() {
           <BallonItem Description="Exemplo basico" Title="Software" />
           <BallonItem Description="Exemplo basico" Title="Teste" />
         </ul>
+        <ServiceCard
+          Icon={Desktop}
+          Title={'Branding'}
+          Description={
+            'Ajudamos-te a criar um projecto que da uma boa experiencia de usuario para seus.'
+          }
+        />
       </main>
     </>
   )
