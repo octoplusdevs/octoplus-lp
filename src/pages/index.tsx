@@ -1,3 +1,4 @@
+import BallonItem from '@/components/ballonItem'
 import CustomerCard from '@/components/cards/customer'
 import Head from 'next/head'
 
@@ -10,7 +11,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
         <h1>Octoplus Developers</h1>
         <CustomerCard
           Name="Wilmy Danguya"
@@ -19,6 +20,11 @@ export default function Home() {
           }
           Role={'Fundador da Octoplus'}
         />
+        <ul style={{ display: 'flex', flexDirection: 'row', gap: '8px' }}>
+          <BallonItem Description="Exemplo basico" Title="Design" />
+          <BallonItem Description="Exemplo basico" Title="Software" />
+          <BallonItem Description="Exemplo basico" Title="Teste" />
+        </ul>
       </main>
     </>
   )
