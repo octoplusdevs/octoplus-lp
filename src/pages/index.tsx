@@ -1,3 +1,4 @@
+import CustomerCard from '@/components/cards/customer'
 import Head from 'next/head'
 
 export default function Home() {
@@ -9,7 +10,16 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>Octoplus Developers</main>
+      <main>
+        <h1>Octoplus Developers</h1>
+        <CustomerCard
+          Name="Wilmy Danguya"
+          Feedback={
+            'Existêm diversas vantagens para escolheres a Octoplus Developers, porém iremos apenas focar em 3 grandes beneficios'
+          }
+          Role={'Fundador da Octoplus'}
+        />
+      </main>
     </>
   )
 }
