@@ -1,8 +1,4 @@
 import styled from 'styled-components'
-import { Inter, Roboto } from '@next/font/google'
-
-const roboto = Roboto({ subsets: ['latin'], weight: '400' })
-const inter = Inter({ subsets: ['latin'] })
 
 export const Wrapper = styled.div`
   padding: 24px;
@@ -20,19 +16,21 @@ export const Wrapper = styled.div`
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
+    height: fit-content;
     span {
       color: #ffb906;
       font-size: 48px;
-      line-height: 48px;
-      font-family: ${roboto.style.fontFamily};
+      font-family: Roboto, sans-serif;
       font-weight: 500;
+      display: inline;
     }
     p {
-      font-family: ${inter.style.fontFamily};
+      font-family: Inter, sans-serif;
       color: #bfbfbf;
       font-size: 14px;
       line-height: 150%;
       font-weight: 400;
+      margin-top: -24px;
     }
   }
   .avatar {
@@ -47,14 +45,14 @@ export const Wrapper = styled.div`
       flex-direction: column;
       gap: 8px;
       h3 {
-        font-family: ${inter.style.fontFamily};
+        font-family: Inter, sans-serif;
         font-size: 16px;
         font-weight: 600;
         line-height: 16px;
         color: #fff;
       }
       span {
-        font-family: ${roboto.style.fontFamily};
+        font-family: Roboto, sans-serif;
         font-size: 14px;
         line-height: 14px;
         font-weight: 400;

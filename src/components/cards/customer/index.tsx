@@ -12,7 +12,7 @@ function CustomerCard(props: propsType) {
   return (
     <Wrapper>
       <div className="header">
-        <span>"</span>
+        <span>“</span>
         <p>{Feedback}</p>
       </div>
       <div className="avatar">
