@@ -3,6 +3,114 @@ import CustomerCard from '@/components/cards/customer'
 import ServiceCard from '@/components/cards/service'
 import { Desktop } from 'phosphor-react'
 import Head from 'next/head'
+import SectionPortifolio from '@/sections/portifolio'
+
+const Portifolios = [
+  {
+    Title: 'Teste',
+    ImagePath: 'eee',
+    Tags: [
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+    ],
+    Type: 'Website',
+  },
+  {
+    Title: 'Teste',
+    ImagePath: 'eee',
+    Tags: [
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+    ],
+    Type: 'Website',
+  },
+  {
+    Title: 'Teste',
+    ImagePath: 'eee',
+    Tags: [
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+    ],
+    Type: 'Website',
+  },
+  {
+    Title: 'Teste',
+    ImagePath: 'eee',
+    Tags: [
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+    ],
+    Type: 'Website',
+  },
+  {
+    Title: 'Teste',
+    ImagePath: 'eee',
+    Tags: [
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+    ],
+    Type: 'Website',
+  },
+  {
+    Title: 'Teste',
+    ImagePath: 'eee',
+    Tags: [
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+    ],
+    Type: 'Website',
+  },
+  {
+    Title: 'Teste',
+    ImagePath: 'eee',
+    Tags: [
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+    ],
+    Type: 'Website',
+  },
+  {
+    Title: 'Teste',
+    ImagePath: 'eee',
+    Tags: [
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+      { Description: 'Teste', Title: 'Design' },
+    ],
+    Type: 'Website',
+  },
+]
 
 export default function Home() {
   return (
@@ -34,6 +142,14 @@ export default function Home() {
             'Ajudamos-te a criar um projecto que da uma boa experiencia de usuario para seus.'
           }
         />
+        {Portifolios.map(({ Title, ImagePath, Tags, Type }) => (
+          <SectionPortifolio
+            Title={Title}
+            ImagePath={ImagePath}
+            Tags={Tags}
+            Type={Type}
+          />
+        ))}
       </main>
     </>
   )
