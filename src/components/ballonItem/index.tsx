@@ -12,7 +12,7 @@ function BallonItem(props: propsType) {
   const { Title, Description, Icon } = props
   return (
     <Wrapper title={Description}>
-      {Icon ? <Icon size={24} /> : <Check size={24} />}
+      {Icon ? <Icon size={14} /> : <Check size={24} />}
       <span>{Title}</span>
     </Wrapper>
   )
