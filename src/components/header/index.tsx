@@ -2,7 +2,7 @@ import { Wrapper } from './style'
 import Link from 'next/link'
 import { ButtonCallToAction } from '../ButtonCTA'
 import Image from 'next/image'
-import { Hamburger, List, X } from 'phosphor-react'
+import { ArrowRight, Hamburger, List, X } from 'phosphor-react'
 import { useState } from 'react'
 
 interface iHeaderProps {
@@ -38,11 +38,10 @@ export function Header(props: iHeaderProps) {
 					</ul>
 				</nav>
 				<div className="cta">
-					<ButtonCallToAction
-						className="call-to-action"
-						text="Começar Projecto"
-						Secundary={false}
-					/>
+					<Link href={'/start'} className="call-to-action">
+						<span>Começar Projecto</span>
+						<ArrowRight size={20} color={'#000'} className="icon" />
+					</Link>
 					<button onClick={onToggleMenu} className="button-hamburguer">
 						{!isMobile ? <List size={32} /> : <X size={32} />}
 					</button>
