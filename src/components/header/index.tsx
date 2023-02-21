@@ -1,8 +1,7 @@
 import { Wrapper } from './style'
 import Link from 'next/link'
-import { ButtonCallToAction } from '../ButtonCTA'
 import Image from 'next/image'
-import { ArrowRight, Hamburger, List, X } from 'phosphor-react'
+import { ArrowRight, List, X } from 'phosphor-react'
 import { useState } from 'react'
 
 interface iHeaderProps {
@@ -50,7 +49,7 @@ export function Header(props: iHeaderProps) {
 			<nav className={`menu-mobile ${isMobile ? 'visible' : 'invisible'}`}>
 				<ul>
 					{links.map(({ text, href }) => (
-						<li className="item active">
+						<li className="item">
 							<Link href={href}>{text}</Link>
 						</li>
 					))}
