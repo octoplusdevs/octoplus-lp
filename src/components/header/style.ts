@@ -71,8 +71,31 @@ export const Wrapper = styled.header`
 		}
 		.cta {
 			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 0.8rem;
 			.call-to-action {
 				display: none;
+				border: 0.4px solid #bfbfbf;
+				background-color: #fff;
+				padding: 1.4rem 2.4rem;
+				color: #000;
+				font-size: 1.6rem;
+				line-break: 1.6rem;
+				font-weight: 500;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: row;
+				gap: 0.8rem;
+				cursor: pointer;
+				transition: all 0.2s ease;
+				text-decoration: none;
+				&:hover {
+					color: #000;
+					border: 0.4px solid transparent;
+					background-color: #0688ff;
+				}
 			}
 			.button-hamburguer {
 				background-color: transparent;
@@ -148,7 +171,7 @@ export const Wrapper = styled.header`
 		}
 		.container .cta {
 			.call-to-action {
-				display: block;
+				display: flex;
 			}
 			.button-hamburguer {
 				display: none;
