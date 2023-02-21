@@ -2,17 +2,17 @@ import { createGlobalStyle } from 'styled-components'
 
 export default createGlobalStyle`
     html {
-        font-size: 62.5%;
+      font-size: 62.5%;
     }
-    body{
-        background-color: #000;
-        font-size: 16px;
+    body {
+      font-size: 1.6rem; /* equivalente a 16px */
+      line-height: 1.5;
     }
     * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Inter, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Inter, sans-serif;
     }
     .container {
         width: 100%;
