@@ -1,37 +1,29 @@
-import { HeaderAccordion, Wrapper, AccordionContent } from './style'
+import { Wrapper } from './style'
 import { CaretDown } from 'phosphor-react'
-import { useState } from 'react'
 
-interface PropsTypes {
-	Position: number
-	Title: string
-	Panel: string
+interface iAccordionPropsTypes {
+	index: number
+	title: string
+	content: string
+	onToggle: (index: any) => void
+	isOpen: boolean
 }
 
-export function Accordion(props: PropsTypes) {
-	const [displayAccordionContent, setdisplayAccordionContent] = useState(false)
-
-	const { Position, Title, Panel } = props
-
-	function hideAcordionContent() {
-		setdisplayAccordionContent(!displayAccordionContent)
-	}
+export function Acordion(props: iAccordionPropsTypes) {
+	const { index, title, content, onToggle, isOpen } = props
 
 	return (
-		<Wrapper>
-			<HeaderAccordion
-				openAcordion={displayAccordionContent}
-				onClick={hideAcordionContent}
-			>
-				<div className="header-content">
-					<span>{Position}</span>
-					<p>{Title}</p>
+		<Wrapper className={` ${isOpen ? 'open' : 'close'}`}>
+			<div className="header" onClick={onToggle}>
+				<div className="header__title">
+					<span>{index}</span>
+					<p>{title}</p>
 				</div>
-				<CaretDown size={32} className="accordion-icon" />
-			</HeaderAccordion>
-			<AccordionContent openAcordion={displayAccordionContent}>
-				<p>{Panel}</p>
-			</AccordionContent>
+				<div className="header__icon">
+					<CaretDown size={32} />
+				</div>
+			</div>
+			<div className="acordion__content">{content}</div>
 		</Wrapper>
 	)
 }

@@ -1,80 +1,72 @@
-import styled, { css } from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
-interface PropsTypes {
-	openAcordion: boolean
-}
-
-
-
-export const Wrapper = styled.div`
-	display: flex;
-	flex-direction: column;
-	color: #fff;
-	margin: 0 auto;
-`
-
-export const HeaderAccordion = styled.header<PropsTypes>`
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	cursor: pointer;
-	border: 1.5px solid #444444;
-	padding: 2.4rem 3.2rem;
-	width: 100%;
-	max-width: 121.6rem;
-	.accordion-icon{
-		transition: transform 0.3s;
-		height: 3rem;
-	}
-
-	.header-content {
+export const Wrapper = styled.li`
+    &:last-child{
+      .header{
+        border-bottom: 1.5px solid #444444;
+      }
+    }
+	.header {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		gap: 2.4rem;
-
-		span,
-		p {
-			font-family: 'Roboto', sans-serif;
-			font-weight: 500;
-			font-size: 2.2rem;
-			line-height: 2.6rem;
+		cursor: pointer;
+		border-top: 1.5px solid #444444;
+		padding: 24px 32px;
+		width: 100%;
+		height: 80px;
+		max-width: 1216px;
+		.header__title {
+			display: flex;
+			align-items: center;
+			gap: 2.4rem;
+			span,
+			p {
+				font-family: 'Roboto', sans-serif;
+				font-weight: 500;
+				font-size: 2rem;
+				line-height: 2.6rem;
+				color: #fff;
+			}
+		}
+		.header__icon {
+			svg {
+				color: #fff;
+				transition: transform 0.3s;
+				height: 3rem;
+			}
 		}
 	}
-
-	${(props) =>
-		props.openAcordion &&
-		css`
-			& {
-				color: #0688ff;
-				.accordion-icon{
-					transform: rotate(-180deg);
-				}
-			}
-		`}
-`
-
-export const AccordionContent = styled.div<PropsTypes>`
-	max-width: 1216px;
-	width: 100%;
-	background-color: #1b1a1a;
-	transition: opacity 0.5s;
-	transition: padding 0.5s;
-	opacity: 0;
-	P {
-		display: none;
+	.acordion__content {
+		max-width: 1216px;
+		width: 100%;
+		padding: 0 72px;
+		height: 0;
+		overflow: hidden;
+		background-color: #1b1a1a;
+		color: #fff;
 		font-weight: 400;
 		font-size: 1.8rem;
 		line-height: 150%;
 		font-family: 'Inter', sans-serif;
+		transition: all 0.3s ease;
+		transform: scale(0.4);
+		opacity: 0;
 	}
-	${(props) =>
-		props.openAcordion &&
-		css`
-			opacity: 1;
-			padding: 2.4rem 7.2rem;
-			p {
-				display: flex;
+	&.open {
+		.header {
+			.header__icon {
+				svg {
+					color: #0688ff;
+					transform: rotate(-180deg);
+				}
 			}
-		`}
+		}
+		.acordion__content {
+			height: 105px;
+			padding: 24px 72px;
+			transform: scale(1);
+			opacity: 1;
+		}
+	}
 `
