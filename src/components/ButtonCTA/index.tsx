@@ -10,7 +10,7 @@ export function ButtonCallToAction(props: propsType) {
 	const { text, Secundary } = props
 
 	return (
-		<Wrapper Secundary={Secundary}>
+		<Wrapper {...props}>
 			{text}
 			<ArrowRight size={24} className="arrow-right" />
 		</Wrapper>
