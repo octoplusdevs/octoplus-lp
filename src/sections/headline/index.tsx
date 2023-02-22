@@ -9,11 +9,13 @@ function Headline() {
 			<div className="container">
 				<div className="content">
 					<h1>
-						Criamos <span>soluções inovadoras</span> para o seu negócio.
+						Transforme o seu negócio com soluções de software{' '}
+						<span>inovadoras e sob medida.</span>
 					</h1>
 					<h2>
-						Posicione sua empresa de maneira que não passe despercebida e
-						consiga transmitir sua mensagem de forma clara e objetiva.
+						Design de UI intuitivo e funcionalidade robusta para ajudar sua
+						empresa a inovar e crescer. Entre em contato conosco hoje para
+						discutir suas necessidades específicas.
 					</h2>
 					<button className="button__gradient">Começar um novo projecto</button>
 				</div>

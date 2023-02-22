@@ -30,7 +30,7 @@ export function Header(props: iHeaderProps) {
 				<nav className="menu">
 					<ul>
 						{links.map(({ text, href }) => (
-							<li className="item">
+							<li className="item active">
 								<Link href={href}>{text}</Link>
 							</li>
 						))}
@@ -39,7 +39,7 @@ export function Header(props: iHeaderProps) {
 				<div className="cta">
 					<Link href={'/start'} className="call-to-action">
 						<span>Começar Projecto</span>
-						<ArrowRight size={20} color={'#000'} className="icon" />
+						<ArrowRight size={20} className="icon" />
 					</Link>
 					<button onClick={onToggleMenu} className="button-hamburguer">
 						{!isMobile ? <List size={32} /> : <X size={32} />}

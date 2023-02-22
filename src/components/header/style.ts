@@ -5,8 +5,9 @@ export const Wrapper = styled.header`
 	height: 100%;
 	max-height: 80px;
 	/* background-color: rgb(255 255 255 / 58%); */
-	background-color: #fff;
+	background-color: rgba(0, 0, 0, 0.2);
 	backdrop-filter: blur(12px);
+	border-bottom: 0.4px solid rgba(255, 255, 255, 0.4);
 	position: fixed;
 	z-index: 50;
 	top: 0;
@@ -22,12 +23,12 @@ export const Wrapper = styled.header`
 			display: flex;
 			flex-direction: row;
 			align-items: center;
-			gap: 8px;
+			gap: 4px;
 			text-decoration: none;
 			h4 {
 				font-size: 2.4rem;
 				font-weight: 700;
-				color: #000;
+				color: #1e90ff;
 			}
 		}
 		.menu {
@@ -40,30 +41,33 @@ export const Wrapper = styled.header`
 					a {
 						padding: 0.8rem;
 						font-size: 1.6rem;
-						color: #404040;
+						color: #fff;
 						text-decoration: none;
 						transition: color 0.3s ease;
+						opacity: 0.64;
 					}
 					&:hover {
 						a {
-							color: #000;
+							opacity: 0.84;
 						}
 					}
 					&.active {
-						a {
-							font-weight: 600;
-							color: #000;
-						}
-						::after {
-							content: '';
-							position: absolute;
-							bottom: -12px;
-							height: 8px;
-							left: 50%;
-							width: 8px;
-							transform: translateX(-50%);
-							border-radius: 50%;
-							background-color: #ff9c06;
+						&:first-child {
+							a {
+								font-weight: 700;
+								opacity: 1;
+							}
+							::after {
+								content: '';
+								position: absolute;
+								bottom: -12px;
+								height: 8px;
+								left: 50%;
+								width: 8px;
+								transform: translateX(-50%);
+								border-radius: 50%;
+								background-color: #ff9c06;
+							}
 						}
 					}
 				}
@@ -76,14 +80,13 @@ export const Wrapper = styled.header`
 			gap: 0.8rem;
 			.call-to-action {
 				display: none;
-				border: 0.4px solid #bfbfbf;
-				background-color: #fff;
+				border: 0.4px solid rgba(255, 255, 255, 0.2);
+				background-color: transparent;
 				padding: 1.4rem 2.4rem;
-				color: #000;
+				color: #fff;
 				font-size: 1.6rem;
 				line-break: 1.6rem;
 				font-weight: 500;
-				display: flex;
 				align-items: center;
 				justify-content: center;
 				flex-direction: row;
@@ -91,16 +94,18 @@ export const Wrapper = styled.header`
 				cursor: pointer;
 				transition: all 0.2s ease;
 				text-decoration: none;
+				border-radius: 4px;
 				&:hover {
-					color: #000;
-					border: 0.4px solid transparent;
-					background-color: #0688ff;
+					color: #fff !important;
+					border: 0.4px solid rgba(255, 255, 255, 0.2);
+					background-color: #202020;
 				}
 			}
 			.button-hamburguer {
 				background-color: transparent;
 				border: none;
 				cursor: pointer;
+				color: #fff;
 			}
 		}
 	}
@@ -110,7 +115,8 @@ export const Wrapper = styled.header`
 		align-items: flex-start;
 		justify-content: center;
 		position: fixed;
-		background-color: #202020;
+		background-color: rgba(0, 0, 0, 0.98);
+		opacity: 1;
 		inset: 80px 0 0 0;
 		border-top: 1px solid #ccc;
 		padding: 4rem;
@@ -134,10 +140,11 @@ export const Wrapper = styled.header`
 					display: block;
 					text-decoration: none;
 					text-align: justify;
+					opacity: 0.64;
 				}
 				&.active {
 					a {
-						color: #fff;
+						opacity: 1;
 						font-weight: 700;
 					}
 					::before {
@@ -158,12 +165,12 @@ export const Wrapper = styled.header`
 	.visible {
 		opacity: 1;
 		visibility: visible;
-		transform: translateY(0);
+		transform: scale(1);
 	}
 	.invisible {
 		opacity: 0;
 		visibility: hidden;
-		transform: translateY(100%);
+		transform: scale(0.5);
 	}
 	@media (min-width: 916px) {
 		.container .menu {
