@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { MouseSimple } from 'phosphor-react'
 import { Wrapper } from './styles'
 
-function Headline() {
+function SectionHeadline() {
 	return (
 		<Wrapper>
 			<div className="container">
@@ -41,4 +41,4 @@ function Headline() {
 	)
 }
 
-export default Headline
+export default SectionHeadline

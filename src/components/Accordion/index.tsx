@@ -9,7 +9,7 @@ interface iAccordionPropsTypes {
 	isOpen: boolean
 }
 
-export function Acordion(props: iAccordionPropsTypes) {
+export default function Accordion(props: iAccordionPropsTypes) {
 	const { index, title, content, onToggle, isOpen } = props
 
 	return (

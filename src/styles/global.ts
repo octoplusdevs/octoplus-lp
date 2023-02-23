@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components'
 export default createGlobalStyle`
     html {
       font-size: 62.5%;
+      background-color: #000;
     }
     body {
       font-size: 1.6rem; /* equivalente a 16px */

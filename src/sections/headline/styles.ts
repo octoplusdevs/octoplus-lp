@@ -2,12 +2,17 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div`
 	min-height: 810px;
-	height: 100vh;
+	height: 100%;
 	background-color: #000;
 	background-image: url('/background_headline.png');
-	background-repeat: no-repeat;
-	background-position: center center;
+	background-repeat: repeat;
+	background-position: 60% 90%;
+	background-size: cover;
 	padding-top: 100px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	.container {
 		display: flex;
 		justify-content: center;

@@ -13,7 +13,7 @@ interface iHeaderProps {
 	isMobile: boolean
 }
 
-export function Header(props: iHeaderProps) {
+export default function Header(props: iHeaderProps) {
 	const { links, isMobile, onToggleMenu } = props
 	return (
 		<Wrapper>
