@@ -3,10 +3,10 @@ import Image from 'next/image'
 import { MouseSimple } from 'phosphor-react'
 import { Wrapper } from './styles'
 
-function SectionHeadline() {
+function SectionHeadline({ ...rest }) {
 	return (
 		<Wrapper>
-			<div className="container">
+			<div className="container" {...rest}>
 				<div className="content">
 					<h1>
 						Transforme o seu negócio com soluções de software{' '}

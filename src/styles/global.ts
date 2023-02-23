@@ -4,6 +4,7 @@ export default createGlobalStyle`
     html {
       font-size: 62.5%;
       background-color: #000;
+      scroll-behavior: smooth;
     }
     body {
       font-size: 1.6rem; /* equivalente a 16px */

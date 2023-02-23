@@ -2,9 +2,9 @@ import { Cards } from '@/components'
 import { Chat } from 'phosphor-react'
 import { Wrapper } from './styles'
 
-function SectionServices() {
+function SectionServices({ ...rest }) {
 	return (
-		<Wrapper>
+		<Wrapper {...rest}>
 			<div className="container">
 				<h1>
 					Nossos serviços criam valor <br /> para o seu negócio

@@ -2,7 +2,8 @@ import { Wrapper } from './style'
 import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, List, X } from 'phosphor-react'
-import { useState } from 'react'
+import React, { useState } from 'react'
+import { useRouter } from 'next/router'
 
 interface iHeaderProps {
 	links: {
@@ -11,13 +12,28 @@ interface iHeaderProps {
 	}[]
 	onToggleMenu: () => void
 	isMobile: boolean
+	activedSection: string
+}
+type HTMLElementEvent<T extends HTMLElement> = Event & {
+	target: T
+	href: string
 }
 
 export default function Header(props: iHeaderProps) {
-	const { links, isMobile, onToggleMenu } = props
+	const { links, isMobile, onToggleMenu, activedSection } = props
+	const router = useRouter()
+
+	const handleAnchorClick = (e: HTMLElementEvent<HTMLLinkElement>) => {
+		e.preventDefault()
+
+		const href = e.target.getAttribute('href')
+
+		router.push(href, undefined, { scroll: false })
+	}
+
 	return (
 		<Wrapper>
-			<div className="container">
+			<div className="container" id="header">
 				<Link href={'/'} className="logo">
 					<Image
 						src="/octoplus-logo.svg"
@@ -30,8 +46,14 @@ export default function Header(props: iHeaderProps) {
 				<nav className="menu">
 					<ul>
 						{links.map(({ text, href }) => (
-							<li className="item active">
-								<Link href={href}>{text}</Link>
+							<li
+								className={`item ${
+									href.split('#')[1] === activedSection ? 'active' : ''
+								}`}
+							>
+								<Link href={href} onClick={handleAnchorClick}>
+									{text}
+								</Link>
 							</li>
 						))}
 					</ul>

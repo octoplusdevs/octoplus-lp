@@ -1,5 +1,5 @@
 export const headerLinks = [
-	{ href: '/#home', text: 'Home' },
+	{ href: '/#top', text: 'Home' },
 	{ href: '/#team', text: 'Team' },
 	{ href: '/#projects', text: 'Projectos' },
 	{ href: '/#services', text: 'Serviços' },

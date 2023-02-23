@@ -52,22 +52,20 @@ export const Wrapper = styled.header`
 						}
 					}
 					&.active {
-						&:first-child {
-							a {
-								font-weight: 700;
-								opacity: 1;
-							}
-							::after {
-								content: '';
-								position: absolute;
-								bottom: -12px;
-								height: 8px;
-								left: 50%;
-								width: 8px;
-								transform: translateX(-50%);
-								border-radius: 50%;
-								background-color: #ff9c06;
-							}
+						a {
+							font-weight: 700;
+							opacity: 1;
+						}
+						::after {
+							content: '';
+							position: absolute;
+							bottom: -12px;
+							height: 8px;
+							left: 50%;
+							width: 8px;
+							transform: translateX(-50%);
+							border-radius: 50%;
+							background-color: #ff9c06;
 						}
 					}
 				}
