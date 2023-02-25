@@ -9,9 +9,6 @@ function SectionHeadline({ ...rest }) {
 				<Portifolio ImagePath="" Tags={[]} Title="Projecto" Type="SS" />
 				<Portifolio ImagePath="" Tags={[]} Title="Projecto" Type="SS" />
 				<Portifolio ImagePath="" Tags={[]} Title="Projecto" Type="SS" />
-				<Portifolio ImagePath="" Tags={[]} Title="Projecto" Type="SS" />
-				<Portifolio ImagePath="" Tags={[]} Title="Projecto" Type="SS" />
-				<Portifolio ImagePath="" Tags={[]} Title="Projecto" Type="SS" />
 			</div>
 		</Wrapper>
 	)
