@@ -1,7 +1,12 @@
 import { headerLinks } from '@/utils/data'
 import useMobileView from '@/hooks/useMobileView'
 import { Wrapper as Main } from '@/styles/home'
-import { SectionHeadline, SectionPortifolio, SectionServices } from '@/sections'
+import {
+	SectionFAQ,
+	SectionHeadline,
+	SectionPortifolio,
+	SectionServices,
+} from '@/sections'
 import { Header, Portifolio } from '@/components'
 import { useRouter } from 'next/router'
 
@@ -21,6 +26,7 @@ export default function Home() {
 			<SectionHeadline id="headline" />
 			<SectionServices id="services" />
 			<SectionPortifolio id="projects" />
+			<SectionFAQ id="faq" />
 		</Main>
 	)
 }
