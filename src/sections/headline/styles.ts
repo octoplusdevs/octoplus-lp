@@ -68,9 +68,8 @@ export const Wrapper = styled.div`
 				transition: all 0.2s ease;
 
 				&:hover {
-					background-color: #202020;
+					background-color: #ffd465;
 					color: #fff;
-					border: 0.4px solid rgba(255, 255, 255, 0.2);
 				}
 			}
 		}

@@ -18,6 +18,15 @@ export const Wrapper = styled.div`
 			text-align: center;
 			margin-bottom: 4rem;
 			color: #fff;
+			font-size: 2.2rem;
+		}
+		@media (min-width: 580px) {
+			h1 {
+				margin-bottom: 4rem;
+				font-size: 3.2rem;
+			}
+		}
+		@media (min-width: 1024px) {
 		}
 	}
 `

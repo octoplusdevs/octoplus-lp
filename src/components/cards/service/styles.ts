@@ -4,7 +4,8 @@ export const Wrapper = styled.div`
 	background-color: #0e0e0f;
 	padding: 48px 24px;
 	height: 294px;
-	width: 384px;
+	width: 100%;
+	/* max-width: 384px; */
 	display: flex;
 	flex-direction: column;
 	gap: 48px;
@@ -13,6 +14,7 @@ export const Wrapper = styled.div`
 		display: flex;
 		flex-direction: column;
 		gap: 8px;
+		width: 100%;
 		h3 {
 			font-family: Inter, sans-serif;
 			font-style: normal;
